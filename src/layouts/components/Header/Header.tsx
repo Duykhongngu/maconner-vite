@@ -1,21 +1,109 @@
 import { ShoppingCart } from "lucide-react";
 import SearchBar from "@/layouts/components/Search/Search";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+
 const inlineMenu = [
-  { title: "Valentine' s Day", link: "/" },
-  { title: "Occasions", link: "" },
-  { title: "Recipients", link: "/" },
-  { title: "Interests", link: "/" },
-  { title: "Home & Kitchen", link: "/" },
-  { title: "Clothing & Jewelry", link: "/" },
-  { title: "Drinkware & Barware", link: "/" },
-  { title: "Accessories", link: "/" },
-  { title: "Happy Customers", link: "/" },
+  {
+    title: "Valentine' s Day",
+    link: "/",
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
+  {
+    title: "Occasions",
+    link: "",
+
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
+  {
+    title: "Recipients",
+    link: "/",
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
+  {
+    title: "Interests",
+    link: "/",
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
+  {
+    title: "Home & Kitchen",
+    link: "/",
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
+  {
+    title: "Clothing & Jewelry",
+    link: "/",
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
+  {
+    title: "Drinkware & Barware",
+    link: "/",
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
+  {
+    title: "Accessories",
+    link: "/",
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
+  {
+    title: "Happy Customers",
+    link: "/",
+    menu: {
+      titleMenu: `title`,
+      children: {
+        page: "Valentine's Day",
+      },
+    },
+  },
 ];
 function Header() {
   return (
     <nav className="border-indigo-100 border-b">
-      <div className=" px-[13px] m-auto pt-[28px] mb-0   ">
-        <div className="flex justify-between items-center gap-[18px] font-semibold text-[16px] ">
+      <div className=" px-[13px] m-auto pt-[28px] text-base mb-0   ">
+        <div className="flex justify-between items-center  gap-[18px] font-semibold text-[16px] ">
           <a href="/" className=" ml-[-7.5px] p-[7.5px] w-[215px] h-[44px]">
             <img
               className="w-[200px] h-[24px]"
@@ -58,13 +146,35 @@ function Header() {
         <nav className="mt-[15px] ">
           <ul className="flex  justify-center ">
             {inlineMenu.map((item, index) => (
-              <li key={index} className="px-[12px] pt-[12px] pb-[20px] ">
-                <a href={item.link}>
-                  <span className="cursor-pointer text-[14px] text-[#121212bf] font-semibold hover:text-orange-400 ">
-                    {item.title}
-                  </span>
-                </a>
-              </li>
+              <HoverCard>
+                <HoverCardTrigger asChild>
+                  <li key={index} className="px-[12px] pt-[12px] pb-[20px] ">
+                    <a href={item.link}>
+                      <span className="cursor-pointer text-[14px] text-[#121212bf] font-semibold hover:text-orange-400 ">
+                        {item.title}
+                      </span>
+                    </a>
+                  </li>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-[1440px] mx-5 -mt-1 space-y-1 h-96 max-h-full min-h-full p-5 ">
+                  <div className="flex w-full max-w-full flex-wrap gap-2 justify-between">
+                    {inlineMenu.map((item, index) => (
+                      <a key={index} href={item.link}>
+                        <ul>
+                          <li className="flex flex-col font-semibold">
+                            <span className="text-[14px] text-[#121212bf]   ">
+                              {item.menu.titleMenu}
+                            </span>
+                            <span className="text-[12px] hover:text-orange-400">
+                              {item.menu.children.page}
+                            </span>
+                          </li>
+                        </ul>
+                      </a>
+                    ))}
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
             ))}
           </ul>
         </nav>
