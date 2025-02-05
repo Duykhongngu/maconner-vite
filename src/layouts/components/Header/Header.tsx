@@ -9,7 +9,7 @@ import {
 const inlineMenu = [
   {
     title: "Valentine' s Day",
-    link: "/",
+    link: "/valentines",
     menu: {
       titleMenu: `title`,
       children: {
@@ -156,7 +156,7 @@ function Header() {
                     </a>
                   </li>
                 </HoverCardTrigger>
-                <HoverCardContent className="w-[1440px] mx-5 -mt-1 space-y-1 h-96 max-h-full min-h-full p-5 ">
+                <HoverCardContent className="w-[1440px] mx-3 -mt-1 space-y-1 h-[700px] max-h-full min-h-full p-5 ">
                   <div className="flex w-full max-w-full flex-wrap gap-2 justify-between">
                     {inlineMenu.map((item, index) => (
                       <a key={index} href={item.link}>
