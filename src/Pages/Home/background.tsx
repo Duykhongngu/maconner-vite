@@ -1,5 +1,3 @@
-import CarouselSlideShow from "./SlideShow";
-
 const BackGround = [
   {
     id: 1,
@@ -38,18 +36,26 @@ const BackGround = [
     title: "Soft Ware",
   },
 ];
+
 function Background() {
   return (
     <div className="flex flex-col">
       <div className="py-9 px-3">
-        <ul className="flex  max-w-[1280px] m-auto justify-between  ">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-[1280px] mx-auto">
           {BackGround.map((item) => (
-            <li className=" w-[170px] h-[170px]    items-center " key={item.id}>
-              <a href={item.link}>
-                <div>
-                  <img className="w-[170px] h-[170px]" src={item.img} alt="" />
+            <li
+              className="flex flex-col items-center justify-center"
+              key={item.id}
+            >
+              <a href={item.link} className="flex flex-col items-center">
+                <div className="w-[82px] h-[82px] sm:w-[82px] sm:h-[82px] lg:w-[170px] lg:h-[170px]">
+                  <img
+                    className="w-full h-full object-contain"
+                    src={item.img || "/placeholder.svg"}
+                    alt={item.title}
+                  />
                 </div>
-                <p className="w-[170px] h-[30.5px] text-center  px-4 pt-3">
+                <p className="text-center px-2 pt-3 text-sm sm:text-base">
                   {item.title}
                 </p>
               </a>

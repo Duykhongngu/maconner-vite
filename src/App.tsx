@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div className="flex flex-col">
         {/* Header luôn cố định */}
-        <div className="sticky top-0 bg-white">
+        <div className="sticky top-0 z-50 bg-white">
           <Header />
         </div>
 
