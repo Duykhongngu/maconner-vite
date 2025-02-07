@@ -18,7 +18,7 @@ function HomeIndex() {
       <div>
         <CarouselSlideShow />
       </div>
-      <div>
+      <div className="xs:ml-3 xs:mr-2 max-xs:ml-3 max-xs:mr-2 ">
         <TrendingHome />
       </div>
       <div>
@@ -30,10 +30,10 @@ function HomeIndex() {
       <div>
         <BottleLamp />
       </div>
-      <div>
+      <div className="xs:ml-3 xs:mr-2 max-xs:ml-3 max-xs:mr-2 ">
         <Recipient />
       </div>
-      <div>
+      <div className="xs:ml-3 xs:mr-2 max-xs:ml-3 max-xs:mr-2 ">
         <Byproduct />
       </div>
       <div className="">

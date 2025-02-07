@@ -56,7 +56,7 @@ function Header() {
 
         <div className="flex justify-between items-center gap-4 font-semibold text-lg">
           {/* Mobile Menu */}
-          <div className="lg:hidden">
+          <div className="lg:hidden w-full">
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
