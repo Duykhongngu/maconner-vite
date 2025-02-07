@@ -6,9 +6,9 @@ import HomeIndex from "./Pages/Home";
 function App() {
   return (
     <Router>
-      <div className="flex flex-col">
+      <div className="w-full flex flex-col">
         {/* Header luôn cố định */}
-        <div className="sticky top-0 z-50 bg-white">
+        <div className=" top-0 z-50 bg-white">
           <Header />
         </div>
 

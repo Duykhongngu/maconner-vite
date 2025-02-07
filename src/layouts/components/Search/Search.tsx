@@ -72,22 +72,22 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto">
+    <div className="w-full  mx-auto">
       <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>
-          <div className="relative">
+          <div className="relative ">
             <Input
               ref={inputRef}
               type="search"
               placeholder="Search"
               aria-label="Search input"
-              className="h-12 pl-4 pr-12 rounded-full  border-black"
+              className=" w-10/12 lg:w-full lg:pl-4 lg:pr-12 h-12 rounded-full  border-black"
               value={value}
               onChange={handleInputChange}
             />
             <button
               type="submit"
-              className="absolute right-1 top-1/2 -translate-y-1/2 p-2 rounded-full bg-orange-500 hover:bg-orange-600 transition-colors"
+              className=" absolute max-xs:right-[70px] max-sm:right-20 sm:right-[103px] lg:right-1 top-1/2 -translate-y-1/2 p-2 rounded-full bg-orange-500 hover:bg-orange-600 transition-colors"
               aria-label="Search"
             >
               <Search className="h-5 w-5 text-white" />

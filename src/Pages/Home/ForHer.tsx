@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import imgHim from "../../assets/images/For_Him_2000x.webp";
+import imgHer from "../../assets/images/For_Her_2000x.webp";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import trend1 from "../../assets/images/trend1.webp";
@@ -14,9 +14,9 @@ import { useNavigate } from "react-router-dom";
 const items = [
   {
     id: 1,
-    title: "For Him",
-    description: "Cupid-Approved Gifts He'll Adore",
-    img: imgHim,
+    title: "For Her",
+    description: " Romantc gifts that melt her heart",
+    img: imgHer,
     click: "SHOP ALL",
     link: "/valentines",
   },
@@ -24,24 +24,24 @@ const items = [
 const contents = [
   {
     id: 1,
-    title: "Car visor clip",
+    title: "Mason jar light",
   },
   {
     id: 2,
-    title: "Leather belt",
+    title: "Mug",
     link: "leatherBelt",
   },
   {
     id: 3,
-    title: " Whiskey glass",
+    title: "Wine glass",
   },
   {
     id: 4,
-    title: "Mirror accessory",
+    title: "Acrylic plaque",
   },
   {
     id: 5,
-    title: "Boxer briefs",
+    title: "Low-waisted brief",
   },
 ];
 
@@ -118,7 +118,7 @@ const leatherBelt = [
     link: "/valentines",
   },
 ];
-function ForHim() {
+function ForHer() {
   const navigate = useNavigate();
   const [selectedIndex, setSelectedIndex] = React.useState(1); // Start with first category
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -144,31 +144,7 @@ function ForHim() {
   // Function to render the appropriate product grid based on selectedIndex
   const renderProductGrid = () => {
     switch (selectedIndex) {
-      case 1: // Car visor clip
-        return (
-          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {visorClip.map((item) => (
-              <li
-                key={item.id}
-                className="border-l-0 rounded-lg cursor-pointer transition"
-                onClick={() => navigate(item.link)}
-              >
-                <div className="overflow-hidden rounded-xl">
-                  <img
-                    src={item.img || "/placeholder.svg"}
-                    alt={item.name}
-                    className="w-full h-auto rounded-lg transform transition duration-300 hover:scale-105"
-                  />
-                </div>
-                <p className="font-medium mt-2 text-base text-gray-800 hover:text-[#f7921f] transition">
-                  {item.description}
-                </p>
-                <p className="text-[#f7921f] font-medium">{item.price}</p>
-              </li>
-            ))}
-          </ul>
-        );
-      case 2: // Leather belt
+      case 1: // Leather belt
         return (
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {leatherBelt.map((item) => (
@@ -192,7 +168,7 @@ function ForHim() {
             ))}
           </ul>
         );
-      case 3: // Car visor clip
+      case 2: // Car visor clip
         return (
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {visorClip.map((item) => (
@@ -216,10 +192,35 @@ function ForHim() {
             ))}
           </ul>
         );
-      case 4: // Leather belt
+
+      case 3: // Leather belt
         return (
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {leatherBelt.map((item) => (
+              <li
+                key={item.id}
+                className="border-l-0 rounded-lg cursor-pointer transition"
+                onClick={() => navigate(item.link)}
+              >
+                <div className="overflow-hidden rounded-xl">
+                  <img
+                    src={item.img || "/placeholder.svg"}
+                    alt={item.name}
+                    className="w-full h-auto rounded-lg transform transition duration-300 hover:scale-105"
+                  />
+                </div>
+                <p className="font-medium mt-2 text-base text-gray-800 hover:text-[#f7921f] transition">
+                  {item.description}
+                </p>
+                <p className="text-[#f7921f] font-medium">{item.price}</p>
+              </li>
+            ))}
+          </ul>
+        );
+      case 4: // Car visor clip
+        return (
+          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {visorClip.map((item) => (
               <li
                 key={item.id}
                 className="border-l-0 rounded-lg cursor-pointer transition"
@@ -326,7 +327,6 @@ function ForHim() {
               </Button>
             ))}
           </div>
-
           {/* Mobile view */}
           <div className="lg:hidden relative w-full flex justify-center items-center">
             <div className="overflow-hidden w-48 flex items-center justify-center">
@@ -336,16 +336,16 @@ function ForHim() {
                   ref={(el) => (buttonRefs.current[item.id] = el)}
                   variant="outline"
                   className={`absolute w-fit h-12 rounded-full justify-start text-sm px-6 py-4 font-normal transition-all duration-300 transform
-                      ${
-                        selectedIndex === item.id
-                          ? "opacity-100 translate-x-0"
-                          : "opacity-0 translate-x-full pointer-events-none"
-                      }
-                      ${
-                        selectedIndex === item.id
-                          ? "bg-white border border-[#f7921f] text-[#f7921f]"
-                          : "bg-[#7373731a]"
-                      }`}
+                  ${
+                    selectedIndex === item.id
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-full pointer-events-none"
+                  }
+                  ${
+                    selectedIndex === item.id
+                      ? "bg-white border border-[#f7921f] text-[#f7921f]"
+                      : "bg-[#7373731a]"
+                  }`}
                   onClick={() => setSelectedIndex(item.id)}
                 >
                   {item.title}
@@ -374,7 +374,7 @@ function ForHim() {
         <a
           href="/"
           className="w-36 h-12 justify-center capitalize items-center flex text-base font-medium  lg:mt-5 lg:mb-10 border bg-[#7373731a] border-[#7373731a] text-slate-700 py-2 px-4 rounded-full
-             hover:border-slate-800 hover:bg-white hover:text-slate-800 hover:transition-all duration-500 ease-out hover:scale-200"
+         hover:border-slate-800 hover:bg-white hover:text-slate-800 hover:transition-all duration-500 ease-out hover:scale-200"
         >
           Show More
         </a>
@@ -383,4 +383,4 @@ function ForHim() {
   );
 }
 
-export default ForHim;
+export default ForHer;
