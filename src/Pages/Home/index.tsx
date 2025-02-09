@@ -1,7 +1,6 @@
 import Background from "./background";
 import BottleLamp from "./BottleLamp";
 import Byproduct from "./ByProduct";
-import Footer from "./Footer";
 import ForHer from "./ForHer";
 import ForHim from "./ForHim";
 import HappyCustomers from "./HappyCustomers";
@@ -38,9 +37,6 @@ function HomeIndex() {
       </div>
       <div className="">
         <HappyCustomers />
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   );

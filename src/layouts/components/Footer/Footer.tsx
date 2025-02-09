@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import dcma from "../../assets/images/dmca_protected_1_120.png";
-import amazon from "../../assets/images/amazon.png";
-import amex from "../../assets/images/footer3.png";
-import applepay from "../../assets/images/footer4.png";
-import ft5 from "../../assets/images/footer5.png";
-import ft6 from "../../assets/images/footer6.png";
-import ft7 from "../../assets/images/footer7.png";
-import ft8 from "../../assets/images/footer8.png";
-import ft9 from "../../assets/images/footer9.png";
-import ft10 from "../../assets/images/footer10.png";
-import ft11 from "../../assets/images/footer11.png";
-import ft12 from "../../assets/images/footer12.png";
+import dcma from "@/assets/images/dmca_protected_1_120.png";
+import amazon from "@/assets/images/amazon.png";
+import amex from "@/assets/images/footer3.png";
+import applepay from "@/assets/images/footer4.png";
+import ft5 from "@/assets/images/footer5.png";
+import ft6 from "@/assets/images/footer6.png";
+import ft7 from "@/assets/images/footer7.png";
+import ft8 from "@/assets/images/footer8.png";
+import ft9 from "@/assets/images/footer9.png";
+import ft10 from "@/assets/images/footer10.png";
+import ft11 from "@/assets/images/footer11.png";
+import ft12 from "@/assets/images/footer12.png";
 import {
   Accordion,
   AccordionContent,
