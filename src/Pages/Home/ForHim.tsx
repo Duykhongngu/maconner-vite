@@ -305,7 +305,7 @@ function ForHim() {
           ))}
         </ul>
       </div>
-      <div className="flex flex-col p-4 mr-5">
+      <div className="flex flex-col mt-6 xs:ml-3 xs:mr-2 max-xs:ml-3 max-xs:mr-2 ">
         <div className="relative flex flex-col items-center">
           {/* Desktop view */}
           <div className="hidden lg:flex flex-wrap justify-center gap-2">
@@ -314,7 +314,7 @@ function ForHim() {
                 key={item.id}
                 ref={(el) => (buttonRefs.current[item.id] = el)}
                 variant="outline"
-                className={`w-fit h-12 rounded-full mr-3 justify-start text-sm md:text-base px-6 py-4 font-normal 
+                className={`w-fit h-12 rounded-full mr-1 justify-start text-sm md:text-base px-6 py-4 font-normal 
                     ${
                       selectedIndex === item.id
                         ? "bg-white border border-[#f7921f] text-[#f7921f]"
@@ -354,14 +354,14 @@ function ForHim() {
             </div>
             <Button
               variant="outline"
-              className="absolute w-10 h-10 border rounded-full left-2"
+              className="absolute w-10 h-10  border rounded-full left-2"
               onClick={handlePrevious}
             >
               <ChevronLeft className="w-6 h-6" />
             </Button>
             <Button
               variant="outline"
-              className="absolute w-10 h-10 rounded-full right-2"
+              className="absolute w-10 h-10  rounded-full right-2"
               onClick={handleNext}
             >
               <ChevronRight className="w-6 h-6" />

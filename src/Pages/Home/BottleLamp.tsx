@@ -305,7 +305,7 @@ function ForHim() {
           ))}
         </ul>
       </div>
-      <div className="flex flex-col p-4 mr-5">
+      <div className="flex flex-col mt-6 xs:ml-3 xs:mr-2 max-xs:ml-3 max-xs:mr-2 ">
         <div className="relative flex flex-col items-center">
           {/* Desktop view */}
           <div className="hidden lg:flex flex-wrap justify-center gap-2">

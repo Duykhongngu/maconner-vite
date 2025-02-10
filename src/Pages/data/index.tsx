@@ -1,0 +1,151 @@
+import trend1 from "../../assets/images/trend1.webp";
+import trend2 from "../../assets/images/trend2.webp";
+import trend3 from "../../assets/images/trend3.webp";
+import trend4 from "../../assets/images/trend4.webp";
+import trend5 from "../../assets/images/trend5.webp";
+import trend6 from "../../assets/images/trend6.webp";
+import trend7 from "../../assets/images/trend7.webp";
+import trend8 from "../../assets/images/trend8.webp";
+export interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  img: string;
+  rating: number;
+  reviews: number;
+  colors: string[];
+  sizes: string[];
+  category: string;
+  inStock: boolean;
+  images: string[];
+  link: string;
+}
+
+export const trendingProducts: Product[] = [
+  {
+    id: 1,
+    name: "Product 1",
+    description:
+      "Drive Safe I F*cking Love You - Funny Gifts For Husband, Wife",
+    price: "$19.95 USD",
+    img: trend1,
+    rating: 5,
+    reviews: 20,
+    colors: ["black", "gray", "red"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+    category: "Valentine's Day",
+    inStock: true,
+    images: [trend1, trend1, trend1, trend1],
+    link: "/details",
+  },
+  {
+    id: 2,
+    name: "Product 2",
+    description:
+      "I Licked It So It's Mine Naughty Couple - Personalized Men's Boxer Briefs",
+    price: "$26.95 USD",
+    img: trend2,
+    rating: 5,
+    reviews: 15,
+    colors: ["black", "gray", "red"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+    category: "Valentine's Day",
+    inStock: true,
+    images: [trend2, trend2, trend2, trend2],
+    link: "/details",
+  },
+  {
+    id: 3,
+    name: "Product 3",
+    description: "Friendship Puzzle Hearts - Personalized Heart Puzzle Name",
+    price: "$26.95 USD",
+    img: trend3,
+    rating: 5,
+    reviews: 18,
+    colors: ["black", "gray", "red"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+    category: "Valentine's Day",
+    inStock: true,
+    images: [trend3, trend3, trend3, trend3],
+    link: "/details",
+  },
+  {
+    id: 4,
+    name: "Product 4",
+    description: "F#ck Valentine's Day, I Love You Everyday - Personalized Mug",
+    price: "$19.95 USD",
+    img: trend4,
+    rating: 5,
+    reviews: 22,
+    colors: ["black", "gray", "red"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+    category: "Valentine's Day",
+    inStock: true,
+    images: [trend4, trend4, trend4, trend4],
+    link: "/details",
+  },
+  {
+    id: 5,
+    name: "Product 5",
+    description:
+      "I Have An Angel Watching Over Me - Personalized Photo Car Ornament",
+    price: "$26.95 USD",
+    img: trend5,
+    rating: 5,
+    reviews: 25,
+    colors: ["black", "gray", "red"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+    category: "Valentine's Day",
+    inStock: true,
+    images: [trend5, trend5, trend5, trend5],
+    link: "/details",
+  },
+  {
+    id: 6,
+    name: "Product 6",
+    description: "A Girl & Her Dogs Has Unbreakable Bond - Personalized Mug",
+    price: "$26.95 USD",
+    img: trend6,
+    rating: 5,
+    reviews: 16,
+    colors: ["black", "gray", "red"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+    category: "Valentine's Day",
+    inStock: true,
+    images: [trend6, trend6, trend6, trend6],
+    link: "/details",
+  },
+  {
+    id: 7,
+    name: "Product 7",
+    description:
+      "You & Me We Got This - Personalized Window Hanging Suncatcher",
+    price: "$26.95 USD",
+    img: trend7,
+    rating: 5,
+    reviews: 16,
+    colors: ["black", "gray", "red"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+    category: "Valentine's Day",
+    inStock: true,
+    images: [trend6, trend6, trend6, trend6],
+    link: "/details",
+  },
+  {
+    id: 8,
+    name: "Product 8",
+    description:
+      "Fuck Valentine's Day I Love You Everyday - Personalized Bottle Lamps",
+    price: "$26.95 USD",
+    img: trend8,
+    rating: 5,
+    reviews: 21,
+    colors: ["black", "gray", "red"],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+    category: "Valentine's Day",
+    inStock: true,
+    images: [trend8, trend8, trend8, trend8],
+    link: "/details",
+  },
+];
