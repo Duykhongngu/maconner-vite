@@ -10,7 +10,7 @@ import TrendingHome from "./TrendingHome";
 
 function HomeIndex() {
   return (
-    <div className="flex flex-col z-10 w-full ">
+    <div className="flex flex-col z-10 w-full max-xs:w-full">
       <div>
         <Background />
       </div>

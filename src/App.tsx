@@ -10,6 +10,8 @@ import HomeIndex from "./Pages/Home";
 import Footer from "./layouts/components/Footer/Footer";
 import ProductDetail from "./Pages/Products/DetailProducts";
 import { useEffect } from "react";
+import CartPage from "./Pages/Products/cartProducts";
+import { CartProvider } from "./Pages/Products/cartContext";
 
 function App() {
   function ScrollToTop() {
@@ -18,34 +20,35 @@ function App() {
     useEffect(() => {
       window.scrollTo(0, 0);
     }, [pathname]);
-
     return null;
   }
 
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        {/* Header luôn cố định */}
-        <header className="sticky top-0 z-50 bg-white shadow">
-          <Header />
-        </header>
+    <CartProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen">
+          <header className="sticky top-0 z-50 bg-white shadow">
+            <Header />
+          </header>
 
-        {/* Nội dung chính */}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomeIndex />} />
-            <Route path="/valentines" element={<ValentinesPages />} />
-            <Route path="/details/:id" element={<ProductDetail />} />
-          </Routes>
-        </main>
+          {/* Nội dung chính */}
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<HomeIndex />} />
+              <Route path="/valentines" element={<ValentinesPages />} />
+              <Route path="/details/:id" element={<ProductDetail />} />
+              <Route path="/cart/:id" element={<CartPage />} />
+            </Routes>
+          </main>
 
-        {/* Footer */}
-        <footer className="">
-          <Footer />
-        </footer>
-      </div>
-    </Router>
+          {/* Footer */}
+          <footer className="">
+            <Footer />
+          </footer>
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 

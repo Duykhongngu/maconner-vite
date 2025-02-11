@@ -118,7 +118,7 @@ const leatherBelt = [
     link: "/valentines",
   },
 ];
-function ForHim() {
+function BottleLa() {
   const navigate = useNavigate();
   const [selectedIndex, setSelectedIndex] = React.useState(1); // Start with first category
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -383,4 +383,4 @@ function ForHim() {
   );
 }
 
-export default ForHim;
+export default BottleLa;

@@ -279,7 +279,7 @@ function ForHim() {
               key={item.id}
               className="w-full flex flex-col md:flex-row items-center justify-center mb-8"
             >
-              <div className="w-full mb-4 md:mb-0">
+              <div className="w-full mb-4 md:mb-0 ">
                 <a href={item.link}>
                   <img
                     src={item.img || "/placeholder.svg"}

@@ -73,7 +73,7 @@ const paymentMethods = [
 
 function Footer() {
   return (
-    <div className="xs:ml-3 xs:mr-2 max-xs:ml-3 max-xs:mr-2 ">
+    <div className=" ">
       <section className="w-full py-8 bg-[#fff8e6]">
         <div className="container mx-auto px-4">
           <h2 className="text-[20px] sm:text-[30px] text-center font-semibold mb-4">
@@ -258,59 +258,61 @@ function Footer() {
               </Button>
               <div className="flex space-x-4 text-center justify-center sm:justify-start">
                 <a href="#" className="text-gray-300  hover:text-white">
-                  <Facebook className="h-7 w-7" />
+                  <Facebook className="h-5 w-5 md:h-7 md:w-7 max-sm:w-4 max-sm:h-4 " />
                 </a>
                 <a href="#" className="text-gray-300 hover:text-white">
-                  <Instagram className="h-7 w-7" />
+                  <Instagram className="h-5 w-5 md:h-7 md:w-7 max-sm:w-4 max-sm:h-4" />
                 </a>
                 <a href="#" className="text-gray-300 hover:text-white">
-                  <Twitter className="h-7 w-7" />
+                  <Twitter className="h-5 w-5 md:h-7 md:w-7 max-sm:w-4 max-sm:h-4" />
                 </a>
                 <a href="#" className="text-gray-300 hover:text-white">
-                  <MessageCircleHeart className="h-7 w-7" />
+                  <MessageCircleHeart className="h-5 w-5 md:h-7 md:w-7 max-sm:w-4 max-sm:h-4" />
                 </a>
                 <a href="#" className="text-gray-300 hover:text-white">
-                  <GlobeIcon className="h-7 w-7" />
+                  <GlobeIcon className="h-5 w-5 md:h-7 md:w-7 max-sm:w-4 max-sm:h-4" />
                 </a>
 
                 <a href="#" className="text-gray-300 hover:text-white">
-                  <TwitchIcon className="h-7 w-7" />
+                  <TwitchIcon className="h-5 w-5 md:h-7 md:w-7 max-sm:w-4 max-sm:h-4" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Payment Methods */}
-          <div className="mt-12 pt-8 border-t border-gray-700">
-            <div className="flex flex-wrap gap-4 justify-center mb-6">
-              {paymentMethods.map((method) => (
-                <img
-                  key={method.name}
-                  src={method.image || "/placeholder.svg"}
-                  alt={`Pay with ${method.name}`}
-                  className="h-6 w-auto object-contain"
-                />
-              ))}
-            </div>
-
-            {/* Footer Links */}
-            <div className="text-center text-sm text-gray-400">
-              <a href="/terms" className="hover:text-white">
-                Terms Of Services
-              </a>
-              <span className="mx-2">•</span>
-              <a href="/privacy" className="hover:text-white">
-                Privacy Policy
-              </a>
-              <span className="mx-2">•</span>
-              <span>
-                MA Commerce Inc. (trading as Macorner), 8 The Green, Ste A,
-                Dover, DE 19901
-              </span>
-            </div>
-          </div>
         </div>
       </footer>
+      <div className="bg-white">
+        <div className="pt-8 border-t border-gray-700">
+          <div className="flex flex-wrap gap-4 justify-center mb-6">
+            {paymentMethods.map((method) => (
+              <img
+                key={method.name}
+                src={method.image || "/placeholder.svg"}
+                alt={`Pay with ${method.name}`}
+                className="h-6 w-auto object-contain"
+              />
+            ))}
+          </div>
+
+          {/* Footer Links */}
+          <div className="xs:hidden text-center text-sm text-gray-400">
+            <a href="/terms" className="hover:text-white">
+              Terms Of Services
+            </a>
+            <span className="mx-2">•</span>
+            <a href="/privacy" className="hover:text-white">
+              Privacy Policy
+            </a>
+            <span className="mx-2">•</span>
+            <span>
+              MA Commerce Inc. (trading as Macorner), 8 The Green, Ste A, Dover,
+              DE 19901
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

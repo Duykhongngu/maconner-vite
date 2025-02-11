@@ -39,7 +39,7 @@ const BackGround = [
 
 function Background() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col max-md:mx-2">
       <div className="py-9 px-3">
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-[1280px] mx-auto">
           {BackGround.map((item) => (

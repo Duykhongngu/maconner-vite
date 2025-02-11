@@ -34,7 +34,7 @@ function TrendingHome() {
               <p className="font-medium mt-2 text-base text-gray-800 hover:text-[#f7921f] transition">
                 {item.description}
               </p>
-              <p className="text-[#f7921f] font-medium">{item.price}</p>
+              <p className="text-[#f7921f] font-medium">${item.price} USD</p>
             </li>
           ))}
         </ul>

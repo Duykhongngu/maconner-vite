@@ -1,24 +1,39 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { trendingProducts } from "../data";
 import { Star, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCart, type CartItem } from "./cartContext";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  img: string;
+}
+
 function ProductDetail() {
   const location = useLocation();
-  const { id } = useParams();
-  const [currentImage, setCurrentImage] = useState(0);
-  const [selectedSize, setSelectedSize] = useState("");
-  const [quantity, setQuantity] = useState(1);
-  console.log(currentImage); // or use it in a conditional statement, etc.
-  // Lấy sản phẩm từ state hoặc từ id trong URL
-  const product =
+  const { id } = useParams<{ id: string }>();
+  const [currentImage, setCurrentImage] = useState<number>(0);
+  console.log(currentImage);
+  const [selectedSize, setSelectedSize] = useState<string>("");
+  const [quantity, setQuantity] = useState<number>(1);
+  const { addToCart, cartItems } = useCart(); // Add cartItems here
+
+  const product: Product | undefined =
     location.state?.product ||
     trendingProducts.find(
-      (item) => item.id === parseInt(id !== undefined ? id : "", 10)
+      (item) => item.id === (id ? Number.parseInt(id, 10) : undefined)
     );
+
+  useEffect(() => {
+    console.log("Current cart items:", cartItems);
+  }, [cartItems]);
+
   if (!product) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -28,6 +43,26 @@ function ProductDetail() {
   }
 
   const { name, description, price, img } = product;
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size before adding to the cart.");
+      return;
+    }
+
+    const cartItem: CartItem = {
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      img: product.img,
+      quantity: quantity,
+      size: selectedSize, // Thêm size vào cart item
+    };
+    console.log("Product price before adding to cart:", product.price);
+
+    addToCart(cartItem);
+    console.log("Product added to cart:", cartItem);
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -86,7 +121,9 @@ function ProductDetail() {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-3xl font-bold text-[#f7921f]">{price}</span>
+            <span className="text-3xl font-bold text-[#f7921f]">
+              ${price}USD
+            </span>
           </div>
 
           {/* Size Selection */}
@@ -129,7 +166,10 @@ function ProductDetail() {
                   +
                 </Button>
               </div>
-              <Button className="flex-1 bg-[#f7921f] hover:bg-[#e88616]">
+              <Button
+                className="flex-1 bg-[#f7921f] hover:bg-[#e88616]"
+                onClick={handleAddToCart}
+              >
                 Add to Cart
               </Button>
             </div>

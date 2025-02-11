@@ -25,10 +25,10 @@ export interface Product {
 export const trendingProducts: Product[] = [
   {
     id: 1,
-    name: "Product 1",
+    name: "Drive Safe",
     description:
       "Drive Safe I F*cking Love You - Funny Gifts For Husband, Wife",
-    price: "$19.95 USD",
+    price: "19.95 ",
     img: trend1,
     rating: 5,
     reviews: 20,
@@ -41,10 +41,10 @@ export const trendingProducts: Product[] = [
   },
   {
     id: 2,
-    name: "Product 2",
+    name: "Boxer",
     description:
       "I Licked It So It's Mine Naughty Couple - Personalized Men's Boxer Briefs",
-    price: "$26.95 USD",
+    price: "26.95 ",
     img: trend2,
     rating: 5,
     reviews: 15,
@@ -57,9 +57,9 @@ export const trendingProducts: Product[] = [
   },
   {
     id: 3,
-    name: "Product 3",
+    name: "Puzzle Name ",
     description: "Friendship Puzzle Hearts - Personalized Heart Puzzle Name",
-    price: "$26.95 USD",
+    price: "26.95 ",
     img: trend3,
     rating: 5,
     reviews: 18,
@@ -72,9 +72,9 @@ export const trendingProducts: Product[] = [
   },
   {
     id: 4,
-    name: "Product 4",
+    name: "Personalized Mug",
     description: "F#ck Valentine's Day, I Love You Everyday - Personalized Mug",
-    price: "$19.95 USD",
+    price: "19.95 ",
     img: trend4,
     rating: 5,
     reviews: 22,
@@ -87,10 +87,10 @@ export const trendingProducts: Product[] = [
   },
   {
     id: 5,
-    name: "Product 5",
+    name: "Car Ornament",
     description:
       "I Have An Angel Watching Over Me - Personalized Photo Car Ornament",
-    price: "$26.95 USD",
+    price: "26.95 ",
     img: trend5,
     rating: 5,
     reviews: 25,
@@ -103,9 +103,9 @@ export const trendingProducts: Product[] = [
   },
   {
     id: 6,
-    name: "Product 6",
+    name: "Personalized Mug",
     description: "A Girl & Her Dogs Has Unbreakable Bond - Personalized Mug",
-    price: "$26.95 USD",
+    price: "26.95 ",
     img: trend6,
     rating: 5,
     reviews: 16,
@@ -118,10 +118,10 @@ export const trendingProducts: Product[] = [
   },
   {
     id: 7,
-    name: "Product 7",
+    name: "Suncatcher ",
     description:
       "You & Me We Got This - Personalized Window Hanging Suncatcher",
-    price: "$26.95 USD",
+    price: "26.95 ",
     img: trend7,
     rating: 5,
     reviews: 16,
@@ -134,10 +134,10 @@ export const trendingProducts: Product[] = [
   },
   {
     id: 8,
-    name: "Product 8",
+    name: "Bottle Lamps",
     description:
       "Fuck Valentine's Day I Love You Everyday - Personalized Bottle Lamps",
-    price: "$26.95 USD",
+    price: "26.95 ",
     img: trend8,
     rating: 5,
     reviews: 21,
