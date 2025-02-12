@@ -121,10 +121,14 @@ const leatherBelt = [
 function BottleLa() {
   const navigate = useNavigate();
   const [selectedIndex, setSelectedIndex] = React.useState(1); // Start with first category
+
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
-    buttonRefs.current[selectedIndex]?.focus();
+    // Chỉ focus nếu selectedIndex đã thay đổi từ một giá trị khác
+    if (selectedIndex !== null) {
+      buttonRefs.current[selectedIndex]?.focus();
+    }
   }, [selectedIndex]);
 
   const handlePrevious = () => {
@@ -344,7 +348,7 @@ function BottleLa() {
                       ${
                         selectedIndex === item.id
                           ? "bg-white border border-[#f7921f] text-[#f7921f]"
-                          : "bg-[#7373731a]"
+                          : "bg-[#f7921f]"
                       }`}
                   onClick={() => setSelectedIndex(item.id)}
                 >

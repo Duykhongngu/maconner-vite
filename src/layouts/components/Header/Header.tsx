@@ -133,7 +133,9 @@ function Header() {
               <SearchIcon className="h-6 w-6" />
             </Button>
             <button className="relative">
-              <ShoppingCart className="h-6 w-6" />
+              <Link to="/cart">
+                <ShoppingCart className="h-6 w-6" />
+              </Link>
               <div className="absolute bg-red-500 text-white flex rounded-full w-5 h-5 -right-2 -top-2 justify-center items-center text-sm">
                 <Link to="/cart">
                   <span>{cartCount}</span>
