@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import imgHer from "../../assets/images/For_Her_2000x.webp";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import trend1 from "../../assets/images/trend1.webp";
 import trend2 from "../../assets/images/trend2.webp";
 import trend3 from "../../assets/images/trend3.webp";
@@ -120,12 +120,9 @@ const leatherBelt = [
 ];
 function ForHer() {
   const navigate = useNavigate();
-  const [selectedIndex, setSelectedIndex] = React.useState(1); // Start with first category
-  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
 
-  useEffect(() => {
-    buttonRefs.current[selectedIndex]?.focus();
-  }, [selectedIndex]);
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const handlePrevious = () => {
     setSelectedIndex((current) => {
@@ -267,7 +264,7 @@ function ForHer() {
         );
       // Add more cases for other categories
       default:
-        return <div>Select a category to view products</div>;
+        return null;
     }
   };
 

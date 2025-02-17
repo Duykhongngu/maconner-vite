@@ -1,7 +1,9 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import imgHim from "../../assets/images/Bottle_Lamp_.webp";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import trend1 from "../../assets/images/Bottle-Lamp_1.webp";
 import trend2 from "../../assets/images/Bottle-Lamp_2.webp";
 import trend3 from "../../assets/images/Bottle-Lamp_3.webp";
@@ -120,16 +122,9 @@ const leatherBelt = [
 ];
 function BottleLa() {
   const navigate = useNavigate();
-  const [selectedIndex, setSelectedIndex] = React.useState(1); // Start with first category
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
 
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
-
-  useEffect(() => {
-    // Chỉ focus nếu selectedIndex đã thay đổi từ một giá trị khác
-    if (selectedIndex !== null) {
-      buttonRefs.current[selectedIndex]?.focus();
-    }
-  }, [selectedIndex]);
 
   const handlePrevious = () => {
     setSelectedIndex((current) => {
@@ -148,7 +143,7 @@ function BottleLa() {
   // Function to render the appropriate product grid based on selectedIndex
   const renderProductGrid = () => {
     switch (selectedIndex) {
-      case 1: // Car visor clip
+      case 1:
         return (
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {visorClip.map((item) => (
@@ -172,7 +167,7 @@ function BottleLa() {
             ))}
           </ul>
         );
-      case 2: // Leather belt
+      case 2:
         return (
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {leatherBelt.map((item) => (
@@ -196,7 +191,7 @@ function BottleLa() {
             ))}
           </ul>
         );
-      case 3: // Car visor clip
+      case 3:
         return (
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {visorClip.map((item) => (
@@ -220,7 +215,7 @@ function BottleLa() {
             ))}
           </ul>
         );
-      case 4: // Leather belt
+      case 4:
         return (
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {leatherBelt.map((item) => (
@@ -244,7 +239,7 @@ function BottleLa() {
             ))}
           </ul>
         );
-      case 5: // Car visor clip
+      case 5:
         return (
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {visorClip.map((item) => (
@@ -268,7 +263,7 @@ function BottleLa() {
             ))}
           </ul>
         );
-      // Add more cases for other categories
+
       default:
         return <div>Select a category to view products</div>;
     }
@@ -311,7 +306,6 @@ function BottleLa() {
       </div>
       <div className="flex flex-col mt-6 xs:ml-3 xs:mr-2 max-xs:ml-3 max-xs:mr-2 ">
         <div className="relative flex flex-col items-center">
-          {/* Desktop view */}
           <div className="hidden lg:flex flex-wrap justify-center gap-2">
             {contents.map((item) => (
               <Button
@@ -331,7 +325,6 @@ function BottleLa() {
             ))}
           </div>
 
-          {/* Mobile view */}
           <div className="lg:hidden relative w-full flex justify-center items-center">
             <div className="overflow-hidden w-48 flex items-center justify-center">
               {contents.map((item) => (
